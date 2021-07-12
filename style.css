@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Orelega+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Comic Sans", cursive;
+  background-image: url("wallpaper.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  text-align: center;
+  min-height: 100vh;
+  line-height: 1.6;
+  font-size: 1.4em;
+  color: rgb(255, 255, 255);
+}
+.container {
+  max-width: 800px;
+  width: calc(100vw - 4em);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.title-name {
+  font-size: calc(6vw + 1rem);
+  text-align: center;
+  color: rgb(0, 172, 230);
+}
+.neonText {
+  font-size: calc(6vw + 1rem);
+  text-align: center;
+  color: rgb(0, 255
+, 255);
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px rgb(0, 172, 255),
+    0 0 21px rgb(0, 0, 255),
+    0 0 42px #e60073,
+    0 0 82px #e60073,
+    0 0 92px #e60073,
+    0 0 102px #e60073,
+    0 0 151px #e60073;
+}
+.img-profile {
+  border-radius: 50%;
+  max-width: 230px;
+  width: calc(100vw - 10em);
+}
+.contact {
+  display: flex;
+  flex-direction: row;
+}
+.thumb-contact {
+  max-width: 100px;
+  width: calc((100vw - 4em) / 5);
+}
+.job-desk {
+  font-family: "Orelega One";
+  text-align: center;
+  font-size: calc(1vw + 0.5rem);
+  font-weight: bold;
+}
+/* ukuran tablet */
+@media screen and (max-width: 1024px) {
+  nav ul {
+    width: 40%;
+  }
+}
+/* ukuran mobile */
+@media screen and (max-width: 576px) {
+  nav {
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  nav ul {
+    position: absolute;
+    right: 0;
+    top: 0;
+    flex-direction: column;
+    background-color: orange;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: -1;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.5s;
+  }
+  .menu-toggle {
+    display: flex;
+  }
+  nav ul.slide {
+    opacity: 1;
+    transform: translateX(0);
+  }
